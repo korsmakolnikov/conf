@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#FUNCTIONS
+function dir-stats () {
+  if [ -z "$1" ]                                                    # Is parameter #1 zero length?
+   then
+     echo "-Parameter #1 is zero length.-"                          # Or no parameter passed.
+     return 1
+   else
+     #find $1 -type f | sed 's/.*\.//' | sort | uniq -c
+     eval "find $1 -type f | sed 's/.*\.//' | sort | uniq -c"
+     return 0
+   fi
+}
+
+export -f dir-stats

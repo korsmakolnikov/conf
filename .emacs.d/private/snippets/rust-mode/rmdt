@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: rust module level documentation test
+# bindings: direct-keybindings
+# key: rmdt
+# --
+//! $0
+//! # Examples
+//! ```
+//! assert_eq!(true, false);
+//! ```

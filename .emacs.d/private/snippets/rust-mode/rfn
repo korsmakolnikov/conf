@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: rust new function
+# key: rfn
+# bindings: direct-keybindings
+# --
+fn $1() -> {
+   $0
+}

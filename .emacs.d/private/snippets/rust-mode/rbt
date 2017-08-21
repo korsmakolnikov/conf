@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: Rust benchmarks test
+# bindings: direct-keybindings
+# key: rbt
+# --
+#![feature(tests)]
+extern crate test;
+use test::Bencher;
+
+#[bench]
+fn $0(b: &mut Bencher) {
+   b.iter(|$1| $2);
+}
