@@ -1,0 +1,5 @@
+*
+!.gitignore
+!.vimrc
+!.bash_profile
+!.spacemacs
