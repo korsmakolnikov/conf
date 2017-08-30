@@ -351,8 +351,7 @@ Put your configuration code here, except for variables that should be set
 before packages are loaded."
   (setq-default
    mac-option-modifier 'hyper
-   mac-right-command-modifier 'meta
-   )
+   mac-right-command-modifier 'meta)
 
   (global-set-key (kbd "s-=") 'spacemacs/scale-up-font)
   (global-set-key (kbd "s--") 'spacemacs/scale-down-font)
@@ -387,15 +386,16 @@ before packages are loaded."
   (global-set-key (kbd "H-E") (kbd "È"))
   (global-set-key (kbd "H-e") (kbd "€"))
   (global-set-key (kbd "H-ò") (kbd "@"))
-
+  (global-set-key (kbd "s-<return>") 'cider-pprint-eval-last-sexp-to-repl)
+  (global-set-key (kbd "H-<up>") 'er/expand-region)
+  
   ;;rust conf
   (add-hook 'rust-mode-hook #'racer-mode)
   (add-hook 'racer-mode-hook #'eldoc-mode)
   (add-hook 'racer-mode-hook #'company-mode)
   (require 'rust-mode)
   (define-key rust-mode-map (kbd "TAB") #'company-indent-or-complete-common)
-  (setq company-tooltip-align-annotations t)
-  )
+  (setq company-tooltip-align-annotations t))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
