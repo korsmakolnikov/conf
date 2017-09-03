@@ -373,7 +373,7 @@ before packages are loaded."
   (global-set-key (kbd "H-(") (kbd "["))
   (global-set-key (kbd "H-)") (kbd "]"))
   (global-set-key (kbd "H-8") (kbd "{"))
-  (global-set-key (kbd "H-9") (kbd "}")) 
+  (global-set-key (kbd "H-9") (kbd "}"))
   (global-set-key (kbd "H-<right>") 'forward-word)
   (global-set-key (kbd "s-<right>") 'end-of-line)
   (global-set-key (kbd "H-<left>") 'backward-word)
@@ -388,7 +388,9 @@ before packages are loaded."
   (global-set-key (kbd "H-ò") (kbd "@"))
   (global-set-key (kbd "s-<return>") 'cider-pprint-eval-last-sexp-to-repl)
   (global-set-key (kbd "H-<up>") 'er/expand-region)
-  
+  (global-set-key (kbd "H-<tab>") 'yas-next-field)
+  (global-set-key (kbd "M-\\") 'yas-completing-prompt)
+
   ;;rust conf
   (add-hook 'rust-mode-hook #'racer-mode)
   (add-hook 'racer-mode-hook #'eldoc-mode)
