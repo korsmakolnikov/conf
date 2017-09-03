@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: test case
+# key: rtc
+# bindings: direct-keybindings
+# --
+#[test]
+fn $1() {
+   assert!($0)
+}

@@ -1,7 +1,7 @@
-*
 !.gitignore
 !.vimrc
 !.bash_profile
 !.spacemacs
-!.emacs.d/private/
+!.emacs.d/private/*
+*
 
