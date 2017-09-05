@@ -37,3 +37,12 @@ source ~/.transfer.sh
 #VAGRANT
 export VAGRANT_DEFAULT_PROVIDER=parallels
 ssh-add -K
+
+##
+# Your previous /Users/BlackSheep/.bash_profile file was backed up as /Users/BlackSheep/.bash_profile.macports-saved_2017-09-05_at_22:51:56
+##
+
+# MacPorts Installer addition on 2017-09-05_at_22:51:56: adding an appropriate PATH variable for use with MacPorts.
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+# Finished adapting your PATH environment variable for use with MacPorts.
+
