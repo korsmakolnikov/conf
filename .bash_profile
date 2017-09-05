@@ -7,7 +7,7 @@ alias dc-rmi='docker rmi $(docker images -a -q) --force'
 alias dc-volume-rm='docker volume rm $(docker volume ls -f dangling=true -q)'
 alias dc-clean-all='dc-rm; dc-rmi; dc-volume-rm'
 
-export PATH="$PATH:/usr/local/bin"
+export PATH="/usr/local/bin:$PATH"
 export PATH="$PATH:/usr/local/sbin:$HOME/.cargo/env"
 export PATH="${HOME}/.config/yarn/global/node_modules/.bin${PATH:+:${PATH}}"
 export PATH="$PATH:$HOME/.composer/vendor/bin"
