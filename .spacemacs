@@ -355,7 +355,17 @@ before packages are loaded."
   (setq-default
    mac-option-modifier 'hyper
    mac-right-command-modifier 'meta
-   ispell-program-name "aspell")
+   ispell-program-name "aspell"
+   ispell-local-dictionary-overridden "en_GB.multi"
+   ;;ispell-local-dictionary-alist
+   ;;'(
+   ;;  ("italian" "[[:alpha:]]" "[^[:alpha:]]" "'" t
+   ;;   ("-d" "it.multi") nil utf-8-lang)
+   ;;  ("english" "[[:alpha:]]" "[^[:alpha:]]" "'" t
+   ;;   ("-d" "en.multi") nil utf-8-lang)
+   ;;  )
+   )
+
   (add-hook 'text-mode-hook '(lambda() (set-fill-column 80)))
 
   (global-set-key (kbd "s-=") 'spacemacs/scale-up-font)
