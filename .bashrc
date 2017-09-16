@@ -1,4 +1,4 @@
-source .bash_aliases
+source ~/.bash_aliases
 export PATH="/usr/local/bin:$PATH"
 export PATH="$PATH:/usr/local/sbin:$HOME/.cargo/env"
 export PATH="${HOME}/.config/yarn/global/node_modules/.bin${PATH:+:${PATH}}"
