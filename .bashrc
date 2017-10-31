@@ -28,3 +28,4 @@ export PS1='[\u@mbp \w$(__git_ps1)]\$ '
 
 #GIT CONFIG
 export EDITOR=vim
+export HOMEBREW_GITHUB_API_TOKEN="ed32bf4d8e23f684f6433ce41b049552e4ef7abc"
