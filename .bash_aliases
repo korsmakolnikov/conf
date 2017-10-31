@@ -1,3 +1,5 @@
+#!/bin/bash
+
 alias nginx.start='sudo launchctl load /Library/LaunchDaemons/homebrew.mxcl.nginx.plist'
 alias nginx.stop='sudo launchctl unload /Library/LaunchDaemons/homebrew.mxcl.nginx.plist'
 alias nginx.restart='nginx.stop && nginx.start'
@@ -18,3 +20,5 @@ alias dc-rm='docker rm $(docker ps -a -q) -f'
 alias dc-rmi='docker rmi $(docker images -a -q) --force'
 alias dc-volume-rm='docker volume rm $(docker volume ls -f dangling=true -q)'
 alias dc-clean-all='dc-rm; dc-rmi; dc-volume-rm'
+alias my-sql='mysql -u root -p'
+alias prn-aliases='cat ~/.bash_aliases'
