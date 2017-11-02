@@ -28,4 +28,4 @@ export PS1='[\u@mbp \w$(__git_ps1)]\$ '
 
 #GIT CONFIG
 export EDITOR=vim
-source ~/Dropbox/.bash_git
+source ~/.bash_git
