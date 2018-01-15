@@ -8,5 +8,6 @@
 !.bash_profile
 !.spacemacs
 !.emacs.d/private/*
+!.bash_function
 *
 
