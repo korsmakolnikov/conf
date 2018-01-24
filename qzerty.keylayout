@@ -1,8 +1,8 @@
 <?xml version="1.1" encoding="UTF-8"?>
 <!DOCTYPE keyboard SYSTEM "file://localhost/System/Library/DTDs/KeyboardLayout.dtd">
 <!--Created by Ukelele version 2.1.10 on 2012-04-03 at 12:04 (GMT+02:00)-->
-<!--Last edited by Ukelele version 3.2.7.195 on 2018-01-23 at 10:26 (CET)-->
-<keyboard group="0" id="5591" name="Italiano Nuovo 3.1" maxout="1">
+<!--Last edited by Ukelele version 3.2.7.195 on 2018-01-24 at 15:21 (CET)-->
+<keyboard group="0" id="5591" name="Italiano Nuovo 3.2" maxout="1">
 	<layouts>
 		<layout first="0" last="17" mapSet="1a4" modifiers="12c"/>
 		<layout first="18" last="18" mapSet="6b8" modifiers="12c"/>
@@ -87,7 +87,7 @@
 			<key code="40" output="k"/>
 			<key code="41" output="m"/>
 			<key code="42" output="+"/>
-			<key code="43" output=";"/>
+			<key code="43" output=","/>
 			<key code="44" output="ò"/>
 			<key code="45" output="n"/>
 			<key code="46" output="&#x0027;"/>
@@ -196,7 +196,7 @@
 			<key code="40" output="K"/>
 			<key code="41" output="M"/>
 			<key code="42" output="*"/>
-			<key code="43" output=","/>
+			<key code="43" output=";"/>
 			<key code="44" output="ç"/>
 			<key code="45" output="N"/>
 			<key code="46" output="?"/>
@@ -286,7 +286,7 @@
 			<key code="23" output=""/>
 			<key code="24" output=""/>
 			<key code="25" output="]"/>
-			<key code="26" output="⇒"/>
+			<key code="26" output="⟹"/>
 			<key code="27" output="#"/>
 			<key code="28" output="["/>
 			<key code="29" output=""/>
@@ -500,7 +500,7 @@
 			<key code="23" output=""/>
 			<key code="24" output=""/>
 			<key code="25" output="}"/>
-			<key code="26" output="⇐"/>
+			<key code="26" output="⟸"/>
 			<key code="27" output=""/>
 			<key code="28" output="{"/>
 			<key code="29" output=""/>
