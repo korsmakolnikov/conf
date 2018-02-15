@@ -32,7 +32,6 @@ export EDITOR=vim
 source ~/.bash_git
 
 # FUNCTIONS
-
 pwatch () {
   domain=$1
   shift
@@ -51,3 +50,6 @@ puwatch () {
 
 export -f pwatch
 export -f puwatch
+
+#ADESPRESSO CONFIG
+source ~/.bashrc_adespresso

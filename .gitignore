@@ -10,5 +10,6 @@
 !.emacs.d/private/*
 !.bash_function
 !qzerty.keylayout
+!.bashrc_adespresso
 *
 
