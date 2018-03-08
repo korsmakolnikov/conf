@@ -1,7 +1,7 @@
 complete -C aws_completer aws
 
-ssh-current-stage() {
+ssh_current_stage() {
    BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
     ssh -t ec2-user@gw.adespresso.com "ssh -t adespresso@docker-stage.adespresso.com \"cd /opt/adespresso_branches/${BRANCH}; ./docker_multi.sh\""
 }
-export -f ssh-current-stage
+export -f ssh_current_stage

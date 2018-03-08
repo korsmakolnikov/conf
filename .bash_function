@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #FUNCTIONS
-function dir-stats () {
+function dir_stats () {
   if [ -z "$1" ]                                                    # Is parameter #1 zero length?
    then
      echo "-Parameter #1 is zero length.-"                          # Or no parameter passed.
@@ -13,4 +13,4 @@ function dir-stats () {
    fi
 }
 
-export -f dir-stats
+export -f dir_stats
