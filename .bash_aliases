@@ -28,3 +28,4 @@ alias git-rb-autosq='git rebase -i --autosquash'
 alias git-fixup='git commit --fixup'
 alias git-lg="git log --pretty='%C(auto)%<(40,trunc)%d%C(green)%h %Cblue%<(20)%cn%Cred%<(70,trunc)%s%Cgreen%aI' --graph"
 alias git-review="git log --pretty='%C(auto)%<(40,trunc)%d%C(green)%h %Cblue%<(20)%cn%Cred%<(70,trunc)%s%Cgreen%aI' --reverse -p"
+alias git-wip="git add . ; git commit -a -m WIP"
