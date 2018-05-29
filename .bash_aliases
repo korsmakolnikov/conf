@@ -23,9 +23,8 @@ alias dc-clean-all='dc-rm; dc-rmi; dc-volume-rm'
 alias my-sql='mysql -u root -p'
 alias prn-aliases='cat ~/.bash_aliases'
 alias git-st='git status'
-alias git-amend='git commit --amend'
-alias git-rb-autosq='git rebase -i --autosquash'
 alias git-fixup='git commit --fixup'
 alias git-lg="git log --pretty='%C(auto)%<(40,trunc)%d%C(green)%h %Cblue%<(20)%cn%Cred%<(70,trunc)%s%Cgreen%aI' --graph"
 alias git-review="git log --pretty='%C(auto)%<(40,trunc)%d%C(green)%h %Cblue%<(20)%cn%Cred%<(70,trunc)%s%Cgreen%aI' --reverse -p"
 alias git-wip="git add . ; git commit -a -m WIP"
+alias jabba_gw='ssh -N -L 8000:internal-jabba-gateway-284692762.us-east-1.elb.amazonaws.com:80 ubuntu@gw-stage-us-east-1.adespresso.com'
