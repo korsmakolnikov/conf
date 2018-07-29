@@ -38,7 +38,7 @@ pwatch () {
   shift
   echo "...watching $domain"
   echo "...testing $@"
-  bash -c "filewatcher -r -s '$domain' 'docker exec -u anon adespresso_deploytools_1 bash -c \"php /var/www/adespresso/bin/phpunit -c app $*\"'"
+  bash -c "find $domain -iname \"*.php\" | entr phpunit -c app $*\"" 
 }
 
 puwatch () {
