@@ -37,7 +37,7 @@ pwatch () {
   shift
   echo "...watching $domain"
   echo "...testing $@"
-  bash -c "find $domain -iname \"*.php\" | entr phpunit -c app $*\"" 
+  bash -c "find $domain -iname \"*.php\" | entr -r -c phpunit -c app $*\"" 
 }
 
 puwatch () {
@@ -45,7 +45,7 @@ puwatch () {
   shift
   echo "...watching $domain"
   echo "...testing $@"
-  bash -c "find $domain -iname \"*.php\" | entr docker exec -u anon adespresso_deploytools_1 bash -c \"php /var/www/adespresso/bin/phpunit -c app $*\"" 
+  bash -c "find $domain -iname \"*.php\" | entr -r -c docker exec -u anon adespresso_deploytools_1 bash -c \"php /var/www/adespresso/bin/phpunit -c app $*\"" 
 }
 
 export -f pwatch
