@@ -1,4 +1,5 @@
 source ~/.bash_aliases
+export ERL_AFLAGS="-kernel shell_history enabled"
 export XDEBUG_IP="10.254.254.254"
 export PATH="/usr/local/bin:$PATH"
 export PATH="$PATH:/usr/local/sbin:$HOME/.cargo/env"
