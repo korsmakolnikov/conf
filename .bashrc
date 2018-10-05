@@ -31,25 +31,5 @@ export PS1='[\u@mbp \w$(__git_ps1)]\$ '
 export EDITOR=vim
 source ~/.bash_git
 
-# FUNCTIONS
-pwatch () {
-  domain=$1
-  shift
-  echo "...watching $domain"
-  echo "...testing $@"
-  bash -c "find $domain -iname \"*.php\" | entr -r -c phpunit -c app $*\"" 
-}
-
-puwatch () {
-  domain=$1
-  shift
-  echo "...watching $domain"
-  echo "...testing $@"
-  bash -c "find $domain -iname \"*.php\" | entr -r -c docker exec -u anon adespresso_deploytools_1 bash -c \"php /var/www/adespresso/bin/phpunit -c app $*\"" 
-}
-
-export -f pwatch
-export -f puwatch
-
 #ADESPRESSO CONFIG
 source ~/.bashrc_adespresso

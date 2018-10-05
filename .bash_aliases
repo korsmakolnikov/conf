@@ -28,7 +28,8 @@ alias git-graph="git log --pretty='%C(auto)%<(40,trunc)%d%C(green)%h %Cblue%<(20
 alias git-lg="git log --pretty='%C(auto)%<(40,trunc)%d%C(green)%h %Cblue%<(20)%cn%Cred%<(70,trunc)%s%Cgreen%aI'"
 alias git-review="git log --pretty='%C(auto)%<(40,trunc)%d%C(green)%h %Cblue%<(20)%cn%Cred%<(68,trunc)%s%Cgreen%aI' --reverse -p"
 alias git-wip="git add . ; git commit -a -m WIP"
-alias jabba_gw='ssh -N -L 8000:internal-jabba-gateway-284692762.us-east-1.elb.amazonaws.com:80 ubuntu@gw-stage-us-east-1.adespresso.com'
+alias jabbagw-prod='ssh -N -L 8000:internal-jabba-gateway-460989976.us-east-1.elb.amazonaws.com:80 ubuntu@gw-stage-us-east-1.adespresso.com'
+alias jabbagw-stage='ssh -N -L 8000:internal-jabba-gateway-284692762.us-east-1.elb.amazonaws.com:80 ubuntu@gw-stage-us-east-1.adespresso.com'
 alias ae-start="docker/init.sh --no-docker-sync"
 alias edit-alias="vim ~/.bash_alias; source ~/.bash_alias"
 alias ae-login="bash --init-file docker/bash_profile -i"
@@ -36,3 +37,4 @@ alias rebar="rebar3"
 alias git-st="git status"
 alias git-lgn="git log -n 10 --pretty='%C(auto)%<(40,trunc)%d%C(green)%h %Cblue%<(20)%cn%Cred%<(70,trunc)%s%Cgreen%aI'"
 alias g="git"
+alias sy-warmup="rm -rf app/cache/* ; console cache:warmup"

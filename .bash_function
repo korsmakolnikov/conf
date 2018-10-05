@@ -13,4 +13,9 @@ function dir_stats () {
    fi
 }
 
+function check_port () {
+  sudo lsof -i :$1
+}
+
+export -f check_port
 export -f dir_stats
