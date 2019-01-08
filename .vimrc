@@ -3,54 +3,26 @@ filetype off
 execute pathogen#infect()
 
 "macvim character size
-:set guifont=Andale\ Mono:h16
+:set guifont=Andale\ Mono:h18
 
 " highlighting
 syntax on
-"set cursorline
+set cursorline
 "hi CursorLine term=bold ctermbg=17 cterm=bold guibg=Grey40           "for standard theme
 "hi CursorLine term=bold ctermbg=8 cterm=bold guibg=Grey40             "for inori theme
 set number				                "mostra i numeri di riga
 
 "Tabbing
 set autoindent				            "autoindenta dopo l'accapo
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set expandtab
 
-"Jumping text
-map  0
-map  $
-map!  <C-\><C-O>0
-map!  <C-\><C-O>$
-map  vbx
-map d vwx
-map!  <C-\><C-O>vbx
-map! d <C-\><C-O>vwx
-map  v0x
-map  v$x
-map!  <C-\><C-O>v0x
-map!  <C-\><C-O>v$x
-map f w
-map b b
-map! f <C-\><C-O>w
-map! b <C-\><C-O>b
-map <Down> }
-map <Up> {
-map! <Down> <C-\><C-O>}
-map! <Up> <C-\><C-O>{
-
-"Tab mapping
-map <Leader>t gg=G 
-"non funziona più control tab
-noremap <Tab> <C-w><C-w>
-
-"Editing text
-map s i<space><esc>l
-map e i<enter><esc>k
-
-"other mapping 
-map U <C-r>
+" maps to delete by word
+map  bvex
+map d vex
+map!  <C-\><C-O>b<C-\><C-O>vex
+map! d <C-\><C-O>vex
 
 "other
 set backspace=indent,eol,start		"permette il backspace in insertmode
@@ -58,6 +30,7 @@ set visualbell				            "sopprime la campanella
 set autoread				              "ricarica i file modificati da altre sorgenti
 "set autowriteall			            "autosave
 set nowrap                        "sopprime il textwrap 
+map <F2> :echo 'Current time is ' . strftime('%c')<CR>
 
 "vundle configuration
 set rtp+=~/.vim/bundle/Vundle.vim
