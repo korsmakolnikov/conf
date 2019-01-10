@@ -35,5 +35,6 @@ alias ae-login="bash --init-file docker/bash_profile -i"
 alias rebar="rebar3"
 alias git-st="git status"
 alias git-lgn="git log -n 10 --pretty='%C(auto)%<(40,trunc)%d%C(green)%h %Cblue%<(20)%cn%Cred%<(70,trunc)%s%Cgreen%aI'"
-alias g="git"
 alias cbranch="git branch | grep \* | cut -d ' ' -f2"
+alias git-append="git commit --amend --no-edit"
+
