@@ -14,7 +14,7 @@ export HOSTS="/etc/hosts"
 #TRANSFER 
 source ~/.transfer.sh
 #VAGRANT
-export VAGRANT_DEFAULT_PROVIDER=parallels
+export VAGRANT_DEFAULT_PROVIDER=virtualbox
 
 export GTAGSLABEL=pygments
 
