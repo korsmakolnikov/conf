@@ -19,10 +19,10 @@ set shiftwidth=4
 set expandtab
 
 " maps to delete by word
-map  bvex
-map d vex
-map!  <C-\><C-O>b<C-\><C-O>vex
-map! d <C-\><C-O>vex
+"map  bvex
+"map d vex
+"map!  <C-\><C-O>b<C-\><C-O>vex
+"map! d <C-\><C-O>vex
 
 "other
 set backspace=indent,eol,start		"permette il backspace in insertmode
