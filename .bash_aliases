@@ -32,7 +32,6 @@ alias jabba_gw='ssh -N -L 8000:internal-jabba-gateway-284692762.us-east-1.elb.am
 alias ae-start="docker/init.sh --no-docker-sync"
 alias edit-alias="vim ~/.bash_alias; source ~/.bash_alias"
 alias ae-login="bash --init-file docker/bash_profile -i"
-alias rebar="rebar3"
 alias git-st="git status"
 alias git-lgn="git log -n 10 --pretty='%C(auto)%<(40,trunc)%d%C(green)%h %Cblue%<(20)%cn%Cred%<(70,trunc)%s%Cgreen%aI'"
 alias cbranch="git branch | grep \* | cut -d ' ' -f2"
