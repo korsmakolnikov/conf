@@ -10,5 +10,7 @@
 !.emacs.d/private/*
 !.bash_function
 !qzerty.keylayout
+!.vim/
+!.vimrc
 *
 
