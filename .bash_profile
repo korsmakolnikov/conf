@@ -3,7 +3,7 @@ export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 source ~/.bashrc
 source ~/.bash_aliases
 source ~/.bash_function
-
+source ~/.bash_ae
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
 . $(brew --prefix asdf)/asdf.sh
