@@ -20,6 +20,7 @@ export PATH="${HOME}/.config/yarn/global/node_modules/.bin${PATH:+:${PATH}}"
 export PATH="$PATH:$GOPATH"
 export PATH="$PATH:$GOBIN"
 export PATH="$PATH:/Users/BlackSheep/.local/bin"
+export PATH="/usr/local/sbin:$PATH"
 
 export HOSTS="/etc/hosts"
 
