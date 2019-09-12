@@ -25,6 +25,11 @@ function git_down () {
     git pull origin $CBRANCH --rebase
 }
 
+function who_on_port () {
+    sudo lsof -i tcp:$1
+}
+
+export -f who_on_port
 export -f git_up
 export -f git_down
 export -f dir_stats
