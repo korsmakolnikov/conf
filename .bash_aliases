@@ -25,7 +25,6 @@ alias prn-aliases='cat ~/.bash_aliases'
 alias git-st='git status'
 alias git-fixup='git commit --fixup'
 alias git-graph="git log --pretty='%C(auto)%<(40,trunc)%d%C(green)%h %Cblue%<(20)%cn%Cred%<(70,trunc)%s%Cgreen%aI' --graph"
-alias git-lg="git log --pretty='%C(auto)%<(40,trunc)%d%C(green)%h %Cblue%<(20)%cn%Cred%<(70,trunc)%s%Cgreen%aI'"
 alias git-review="git log --pretty='%C(auto)%<(40,trunc)%d%C(green)%h %Cblue%<(20)%cn%Cred%<(68,trunc)%s%Cgreen%aI' --reverse -p"
 alias git-wip="git add . ; git commit -a -m WIP"
 alias jabba_gw='ssh -N -L 8000:internal-jabba-gateway-284692762.us-east-1.elb.amazonaws.com:80 ubuntu@gw-stage-us-east-1.adespresso.com'
@@ -33,7 +32,8 @@ alias ae-start="docker/init.sh --no-docker-sync"
 alias edit-alias="vim ~/.bash_alias; source ~/.bash_alias"
 alias ae-login="bash --init-file docker/bash_profile -i"
 alias git-st="git status"
-alias git-lgn="git log -n 10 --pretty='%C(auto)%<(40,trunc)%d%C(green)%h %Cblue%<(20)%cn%Cred%<(70,trunc)%s%Cgreen%aI'"
+alias git-lg="git log --pretty='%C(auto)%<(40,trunc)%d%C(green)%h %Cblue%<(20)%cn%Cred%<(70,trunc)%s%Cgreen%aI'"
+alias git-lgn="git log -n 10 --pretty='%C(auto)%<(40,trunc)%d%C(green)%h %Cblue%<(10,trunc)%cn%Cred%<(70,trunc)%s'"
 alias cbranch="git branch | grep \* | cut -d ' ' -f2"
 alias git-append="git commit --amend --no-edit"
 
