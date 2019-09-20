@@ -36,4 +36,4 @@ alias git-lg="git log --pretty='%C(auto)%<(40,trunc)%d%C(green)%h %Cblue%<(20)%c
 alias git-lgn="git log -n 10 --pretty='%C(auto)%<(40,trunc)%d%C(green)%h %Cblue%<(10,trunc)%cn%Cred%<(70,trunc)%s'"
 alias cbranch="git branch | grep \* | cut -d ' ' -f2"
 alias git-append="git commit --amend --no-edit"
-
+alias git-sync="git fetch -p && git rebase origin/master"
