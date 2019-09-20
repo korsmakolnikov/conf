@@ -22,6 +22,7 @@ function git_up () {
 function git_down () {
     CBRANCH=`git branch | grep \* | cut -d ' ' -f2`
     echo -e "\033e[1mpull local branch from origin/${CBRANCH}\033[0m"
+    git fetch -p
     git pull origin $CBRANCH --rebase
 }
 
