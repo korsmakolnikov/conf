@@ -8,6 +8,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'mbbill/undotree'
 Plug 'vim-scripts/ZoomWin'
 Plug 'jremmen/vim-ripgrep'
+Plug 'zivyangll/git-blame.vim'
 
 " Git plugin
 
@@ -51,6 +52,9 @@ let NERDTreeWinSize = 50
 autocmd VimEnter * if &filetype !=# 'gitcommit' | NERDTree | wincmd p | endif
 " automatically quit if nerdtree is the only windows
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" git blame configuration
+nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
 
 " Airline configuration
 let g:airline_theme='bubblegum'
