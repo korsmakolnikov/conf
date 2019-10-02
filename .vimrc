@@ -7,6 +7,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'mbbill/undotree'
 Plug 'vim-scripts/ZoomWin'
+Plug 'jremmen/vim-ripgrep'
 
 " Git plugin
 
