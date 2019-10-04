@@ -9,6 +9,7 @@ Plug 'mbbill/undotree'
 Plug 'vim-scripts/ZoomWin'
 Plug 'jremmen/vim-ripgrep'
 Plug 'zivyangll/git-blame.vim'
+Plug 'jlanzarotta/bufexplorer'
 
 " Git plugin
 
