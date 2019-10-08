@@ -93,3 +93,6 @@ map <Leader>ls :call LanguageClient#textDocument_documentSymbol()<CR>
 
 " fix syntax highlighting
 autocmd FileType javascript syn sync ccomment javaScriptComment
+
+" bufexplorer
+nnoremap <F4> :call BufExplorer()<CR>
