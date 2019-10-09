@@ -1,38 +1,11 @@
-call plug#begin('~/.vim/plugged')
-" General plugin
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'airblade/vim-gitgutter'
-Plug 'mileszs/ack.vim'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'mbbill/undotree'
-Plug 'vim-scripts/ZoomWin'
-Plug 'jremmen/vim-ripgrep'
-Plug 'zivyangll/git-blame.vim'
-Plug 'jlanzarotta/bufexplorer'
-
-" Git plugin
-
-" Docker plugin
-Plug 'ekalinin/Dockerfile.vim'
-
-" Languages plugin 
-Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': './install.sh' }
-Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
-call plug#end()
-
+" Basic conf
 syntax enable
 colorscheme darcula
 set number
+
+" Cursor configuration
+set guicursor+=n-v-c:blinkon0
+set guicursor+=i:blinkwait10
 
 " Editor configuration
 filetype plugin indent on
@@ -44,6 +17,44 @@ set shiftwidth=2
 set expandtab
 " Fix backspace
 :set bs=2
+
+call plug#begin('~/.vim/plugged')
+" General plugin
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+
+" Airline is the toolbar
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+Plug 'mbbill/undotree'                                                         " print a tree of undo
+Plug 'vim-scripts/ZoomWin'                                                     " ctrl-w o to swap full size window
+Plug 'jremmen/vim-ripgrep'                                                     " fast grep inside project
+Plug 'jlanzarotta/bufexplorer'                                                 " buf explorer window
+
+" Git plugin
+Plug 'airblade/vim-gitgutter'                                                  " print changes on left of line numbers
+Plug 'zivyangll/git-blame.vim'                                                 " print blame in command bar
+
+" Docker plugin
+Plug 'ekalinin/Dockerfile.vim'
+
+" Languages plugin (not working with js) 
+Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': './install.sh' }
+Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
+
+" Deoplete autocompletition plugin
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
+
+call plug#end()
 
 " NERDTree
 " nerdtree on the right
@@ -96,3 +107,6 @@ autocmd FileType javascript syn sync ccomment javaScriptComment
 
 " bufexplorer
 nnoremap <F4> :call BufExplorer()<CR>
+
+" undotree 
+nnoremap <F3> :UndotreeToggle<cr>
