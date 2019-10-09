@@ -11,6 +11,7 @@
 !.bash_function
 !qzerty.keylayout
 !.vim/
+.vim/plugged
 !.vimrc
 !.bash_ae.dist
 *
