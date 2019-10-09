@@ -40,7 +40,6 @@ Plug 'ekalinin/Dockerfile.vim'
 
 " Languages plugin (not working with js) 
 Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': './install.sh' }
-Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
 
 " Deoplete autocompletition plugin
 if has('nvim')
@@ -53,6 +52,9 @@ endif
 
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
+
+Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
+Plug 'elixir-editors/vim-elixir'
 
 call plug#end()
 
