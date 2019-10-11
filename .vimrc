@@ -3,7 +3,10 @@ syntax enable
 colorscheme darcula
 set number
 
-" Cursor configuration
+" Load local .vimrc
+set exrc
+
+" Cursor configuration TODO not working
 set guicursor+=n-v-c:blinkon0
 set guicursor+=i:blinkwait10
 
@@ -16,7 +19,10 @@ set shiftwidth=2
 " On pressing tab, insert 4 spaces
 set expandtab
 " Fix backspace
-:set bs=2
+set bs=2
+
+" consent to move freely in the page even if there are no spaces
+set virtualedit=all 
 
 call plug#begin('~/.vim/plugged')
 " General plugin
@@ -27,9 +33,9 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 Plug 'mbbill/undotree'                                                         " print a tree of undo
-Plug 'vim-scripts/ZoomWin'                                                     " ctrl-w o to swap full size window
 Plug 'jremmen/vim-ripgrep'                                                     " fast grep inside project
 Plug 'jlanzarotta/bufexplorer'                                                 " buf explorer window
+Plug 'junegunn/goyo.vim'                                                       " disctraction free mode :Goyo, turn off by :Goyo!
 
 " Git plugin
 Plug 'airblade/vim-gitgutter'                                                  " print changes on left of line numbers
@@ -40,6 +46,7 @@ Plug 'ekalinin/Dockerfile.vim'
 
 " Languages plugin (not working with js) 
 Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': './install.sh' }
+" Plug 'w0rp/ale'
 
 " Deoplete autocompletition plugin
 if has('nvim')
@@ -53,8 +60,15 @@ endif
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
 
-Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
-Plug 'elixir-editors/vim-elixir'
+Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }                         " haskell language server client
+Plug 'elixir-editors/vim-elixir'                                               " elixir plug in
+Plug 'mxw/vim-jsx'                                                             " vim-jsx and vim-javascript fix js highlighting
+Plug 'pangloss/vim-javascript'
+
+" Color schemes
+Plug 'plainfingers/black_is_the_color'
+Plug 'flrnd/plastic.vim'
+Plug 'dikiaap/minimalist'
 
 call plug#end()
 
@@ -112,3 +126,7 @@ nnoremap <F4> :call BufExplorer()<CR>
 
 " undotree 
 nnoremap <F3> :UndotreeToggle<cr>
+
+" open configuration
+nnoremap <F12> :execute "e ~/.vimrc"<CR>
+nnoremap <S-F12> :execute "source ~/.vimrc"<CR>
