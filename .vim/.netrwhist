@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =4
 let g:netrw_dirhist_1='/Users/BlackSheep/www/wip/ex'
 let g:netrw_dirhist_2='/Users/BlackSheep/www/wip/ex/app'
 let g:netrw_dirhist_3='/Users/BlackSheep/www/fe-global/adespresso/fe-ae-lib-boost-composer'
+let g:netrw_dirhist_4='/Users/BlackSheep/www/fe-global'
