@@ -46,7 +46,6 @@ Plug 'ekalinin/Dockerfile.vim'
 
 " Languages plugin (not working with js) 
 Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': './install.sh' }
-" Plug 'w0rp/ale'
 
 " Deoplete autocompletition plugin
 if has('nvim')
@@ -58,7 +57,7 @@ else
 endif
 
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
+Plug 'deoplete-plugins/deoplete-go', { 'do': 'make' }
 
 Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }                         " haskell language server client
 Plug 'elixir-editors/vim-elixir'                                               " elixir plug in
@@ -99,10 +98,12 @@ set completeopt=menu,noinsert
 set hidden
 
 " Inactive language servers bind
+" javascript does not work. I think server does not start
 " \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
+" \ 'javascript': ['/usr/local/bin/javascript-typescript-stdio'],
 let g:LanguageClient_serverCommands = {
     \ 'haskell': ['hie-wrapper'],
-    \ 'javascript': ['/usr/local/bin/javascript-typescript-stdio'],
+    \ 'javascript': ['tcp://127.0.0.1:2089'],
     \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
     \ 'go': ['go-languageserver -gocodecompletion'],
     \ }
