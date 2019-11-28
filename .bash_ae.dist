@@ -1,4 +1,4 @@
-export AD_ACCOUNTNAME=federico.caprari@hootsuite.com
+export AD_ACCOUNTNAME=federico.caprari
 
 # GOLANG
 export GOPATH="${HOME}/go"
