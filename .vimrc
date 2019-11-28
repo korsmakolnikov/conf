@@ -131,3 +131,19 @@ nnoremap <F3> :UndotreeToggle<cr>
 " open configuration
 nnoremap <F12> :execute "e ~/.vimrc"<CR>
 nnoremap <S-F12> :execute "source ~/.vimrc"<CR>
+
+" quick find shortcuts
+function! QuickSearch () 
+  let currentWord = expand("<cword>")
+  :execute "Rg ". currentWord
+endfunction
+nnoremap <C-f> :call QuickSearch()<CR>
+nnoremap <C-c> :NERDTreeFind<CR>
+function! UnixSearch (fileName)
+  :execute "!find . -iname ". a:fileName
+endfunction
+:command -nargs=+ Us :call UnixSearch(<f-args>)
+function! UnixSearchInsensitive (fileName)
+  :execute "!find . -name ". a:fileName
+endfunction
+:command -nargs=+ Usi :call UnixSearchInsensitive(<f-args>)
