@@ -21,6 +21,7 @@ export PATH="$PATH:$GOPATH"
 export PATH="$PATH:$GOBIN"
 export PATH="$PATH:/Users/BlackSheep/.local/bin"
 export PATH="/usr/local/sbin:$PATH"
+export PATH="/Users/BlackSheep/.asdf/installs/rebar/3.11.1:$PATH"
 
 export HOSTS="/etc/hosts"
 
