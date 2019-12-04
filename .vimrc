@@ -73,6 +73,19 @@ call plug#end()
 
 " NERDTree
 " nerdtree on the right
+function! IsNerdTreeEnabled()
+  return exists('t:NERDTreeBufName') && bufwinnr(t:NERDTreeBufName) != -1
+endfunction
+
+function! ToggleNerdTree()
+  :if IsNerdTreeEnabled()
+  :execute "NERDTreeClose" | echom "close nerdtree"
+  :else
+  :execute "NERDTree" | echom "toggle nerdtree"
+  :endif
+endfunction
+
+nnoremap <silent> <F2> :call ToggleNerdTree()<CR>
 let g:NERDTreeWinPos = "right"
 autocmd VimEnter * NERDTree
 let NERDTreeWinSize = 50
@@ -123,14 +136,14 @@ map <Leader>ls :call LanguageClient#textDocument_documentSymbol()<CR>
 autocmd FileType javascript syn sync ccomment javaScriptComment
 
 " bufexplorer
-nnoremap <F4> :call BufExplorer()<CR>
+nnoremap <silent> <F4> :call BufExplorer()<CR>
 
 " undotree 
-nnoremap <F3> :UndotreeToggle<cr>
+nnoremap <silent> <F3> :UndotreeToggle<cr>
 
 " open configuration
-nnoremap <F12> :execute "e ~/.vimrc"<CR>
-nnoremap <S-F12> :execute "source ~/.vimrc"<CR>
+nnoremap <silent> <F12> :execute "e ~/.vimrc"<CR>
+nnoremap <silent> <S-F12> :execute "source ~/.vimrc"<CR>
 
 " quick find shortcuts
 function! QuickSearch () 
