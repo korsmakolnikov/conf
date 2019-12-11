@@ -1,6 +1,9 @@
 " Basic conf
 syntax enable
-colorscheme darcula
+colorscheme darcula 
+
+autocmd! BufLeave *.go colorscheme darcula
+autocmd BufEnter,BufNewFile,BufRead *.go colorscheme monokai-bold
 set number
 
 " Load local .vimrc
@@ -65,9 +68,8 @@ Plug 'mxw/vim-jsx'                                                             "
 Plug 'pangloss/vim-javascript'
 
 " Color schemes
-Plug 'plainfingers/black_is_the_color'
-Plug 'flrnd/plastic.vim'
-Plug 'dikiaap/minimalist'
+Plug 'athom/more-colorful.vim'
+Plug 'Mcmartelle/vim-monokai-bold'
 
 call plug#end()
 
@@ -160,3 +162,10 @@ function! UnixSearchInsensitive (fileName)
   :execute "!find . -name ". a:fileName
 endfunction
 :command -nargs=+ Usi :call UnixSearchInsensitive(<f-args>)
+
+" vim-go and golang rules
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_extra_types = 1
+
