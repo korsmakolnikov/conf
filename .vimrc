@@ -2,8 +2,8 @@
 syntax enable
 colorscheme darcula 
 
-autocmd! BufLeave *.go colorscheme darcula
-autocmd BufEnter,BufNewFile,BufRead *.go colorscheme monokai-bold
+"autocmd! BufLeave *.go colorscheme darcula
+"autocmd BufEnter,BufNewFile,BufRead *.go colorscheme monokai-bold
 set number
 
 " Load local .vimrc
@@ -60,6 +60,7 @@ else
 endif
 
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'athom/more-colorful.vim' "fix color syntax highlighting for golang
 Plug 'deoplete-plugins/deoplete-go', { 'do': 'make' }
 
 Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }                         " haskell language server client
@@ -68,7 +69,6 @@ Plug 'mxw/vim-jsx'                                                             "
 Plug 'pangloss/vim-javascript'
 
 " Color schemes
-Plug 'athom/more-colorful.vim'
 Plug 'Mcmartelle/vim-monokai-bold'
 
 call plug#end()
