@@ -1,11 +1,5 @@
 export AD_ACCOUNTNAME=federico.caprari
 
-# GOLANG
-export GOPATH="${HOME}/www/go"
-# export GOROOT="$(brew --prefix golang)/libexec"
-export GOROOT="/usr/local/opt/go/libexec"
-export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
-
 # MYSQL
 export PATH="$PATH:/usr/local/Cellar/mysql@5.6/5.6.43/bin/"
 export LDFLAGS="-L/usr/local/opt/mysql@5.6/lib"

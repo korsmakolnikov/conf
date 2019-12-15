@@ -7,18 +7,18 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 # export PHP_IDE_CONFIG="serverName=local"
 # export XDEBUG_CONFIG="remote_enable=1 remote_mode=req remote_port=9001 remote_host=127.0.0.1 idekey=PHPSTORM"
 
-# Go
-export GOPATH="$HOME/go"
-export GOBIN="$GOPATH/bin"
-export PATH="$PATH:$GOPATH"
+# GOLANG
+export GOPATH="${HOME}/www/go"
+# export GOROOT="$(brew --prefix golang)/libexec" # try if this works.
+export GOROOT="/usr/local/opt/go/libexec"
+export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
+
 
 # Path
 export PATH="/usr/local/opt/icu4c/sbin:$PATH"
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="${HOME}/.config/yarn/global/node_modules/.bin${PATH:+:${PATH}}"
-export PATH="$PATH:$GOPATH"
-export PATH="$PATH:$GOBIN"
 export PATH="$PATH:/Users/BlackSheep/.local/bin"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/Users/BlackSheep/.asdf/installs/rebar/3.11.1:$PATH"
