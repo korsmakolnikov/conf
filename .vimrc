@@ -59,14 +59,18 @@ else
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
 
+" golang plugin
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'athom/more-colorful.vim' "fix color syntax highlighting for golang
 Plug 'deoplete-plugins/deoplete-go', { 'do': 'make' }
+" golang plugin end
 
 Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }                         " haskell language server client
 Plug 'elixir-editors/vim-elixir'                                               " elixir plug in
-Plug 'mxw/vim-jsx'                                                             " vim-jsx and vim-javascript fix js highlighting
+
+" js plugin
+Plug 'mxw/vim-jsx'                                                             " vim-jsx and vim-javascript fix js highlightind
 Plug 'pangloss/vim-javascript'
+" js plugin end
 
 " Color schemes
 Plug 'Mcmartelle/vim-monokai-bold'
@@ -108,6 +112,21 @@ autocmd FileType json syntax match Comment +\/\/.\+$+
 " deoplete config
 let g:deoplete#enable_at_startup = 1
 set completeopt=menu,noinsert
+call deoplete#custom#option({
+\ 'auto_complete_delay': 300,
+\ 'smart_case': v:true,
+\ })
+
+" vim-go and golang rules
+let g:go_auto_sameids = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_parameters = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_variable_declarations = 0
+let g:go_highlight_variable_assignments = 1
+"let g:go_fmt_autosave = 0
 
 " Required for operations modifying multiple buffers like rename.
 set hidden
@@ -115,7 +134,6 @@ set hidden
 " Inactive language servers bind
 " javascript does not work. I think server does not start
 " \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
-" \ 'javascript': ['/usr/local/bin/javascript-typescript-stdio'],
 let g:LanguageClient_serverCommands = {
     \ 'haskell': ['hie-wrapper'],
     \ 'javascript': ['tcp://127.0.0.1:2089'],
@@ -152,8 +170,8 @@ function! QuickSearch ()
   let currentWord = expand("<cword>")
   :execute "Rg ". currentWord
 endfunction
-nnoremap <C-f> :call QuickSearch()<CR>
-nnoremap <C-c> :NERDTreeFind<CR>
+nnoremap <silent> <C-f> :call QuickSearch()<CR>
+nnoremap <silent> <C-c> :NERDTreeFind<CR>
 function! UnixSearch (fileName)
   :execute "!find . -iname ". a:fileName
 endfunction
@@ -162,10 +180,4 @@ function! UnixSearchInsensitive (fileName)
   :execute "!find . -name ". a:fileName
 endfunction
 :command -nargs=+ Usi :call UnixSearchInsensitive(<f-args>)
-
-" vim-go and golang rules
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_structs = 1
-let g:go_highlight_extra_types = 1
 
