@@ -34,6 +34,7 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 " Airline is the toolbar
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'enricobacis/vim-airline-clock'
 
 Plug 'mbbill/undotree'                                                         " print a tree of undo
 Plug 'jremmen/vim-ripgrep'                                                     " fast grep inside project
