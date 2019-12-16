@@ -5,3 +5,6 @@ export PATH="$PATH:/usr/local/Cellar/mysql@5.6/5.6.43/bin/"
 export LDFLAGS="-L/usr/local/opt/mysql@5.6/lib"
 export CPPFLAGS="-I/usr/local/opt/mysql@5.6/include"
 . /usr/local/bin/hs-opskit-rc-bash
+
+export HSPATH="/Users/BlackSheep/www/go/src/go.hootops.com/hootsuite"
+

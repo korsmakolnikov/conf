@@ -13,6 +13,8 @@ export GOPATH="${HOME}/www/go"
 export GOROOT="/usr/local/opt/go/libexec"
 export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 
+#Rust
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # Path
 export PATH="/usr/local/opt/icu4c/sbin:$PATH"
