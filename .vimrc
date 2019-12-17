@@ -37,7 +37,9 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'enricobacis/vim-airline-clock'
 
 Plug 'mbbill/undotree'                                                         " print a tree of undo
-Plug 'jremmen/vim-ripgrep'                                                     " fast grep inside project
+"Plug 'jremmen/vim-ripgrep'                                                     " fast grep inside project
+Plug '/usr/local/opt/fzf'                                                      " fast grep file content
+Plug 'junegunn/fzf.vim'                                                        " fzf plugin that rely on rg
 Plug 'jlanzarotta/bufexplorer'                                                 " buf explorer window
 Plug 'junegunn/goyo.vim'                                                       " disctraction free mode :Goyo, turn off by :Goyo!
 
