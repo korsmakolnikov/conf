@@ -30,6 +30,7 @@ set virtualedit=all
 call plug#begin('~/.vim/plugged')
 " General plugin
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'SirVer/ultisnips'
 
 " Airline is the toolbar
 Plug 'vim-airline/vim-airline'
@@ -37,8 +38,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'enricobacis/vim-airline-clock'
 
 Plug 'mbbill/undotree'                                                         " print a tree of undo
-"Plug 'jremmen/vim-ripgrep'                                                     " fast grep inside project
-Plug '/usr/local/opt/fzf'                                                      " fast grep file content
+Plug '/usr/local/opt/fzf', { 'do': 'brew install fzf' }                        " fast grep file content
 Plug 'junegunn/fzf.vim'                                                        " fzf plugin that rely on rg
 Plug 'jlanzarotta/bufexplorer'                                                 " buf explorer window
 Plug 'junegunn/goyo.vim'                                                       " disctraction free mode :Goyo, turn off by :Goyo!
@@ -93,6 +93,11 @@ function! ToggleNerdTree()
   :execute "NERDTree" | echom "toggle nerdtree"
   :endif
 endfunction
+
+" ultimate snippet plugin conf 
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 nnoremap <silent> <F2> :call ToggleNerdTree()<CR>
 let g:NERDTreeWinPos = "right"
