@@ -38,7 +38,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'enricobacis/vim-airline-clock'
 
 Plug 'mbbill/undotree'                                                         " print a tree of undo
-Plug '/usr/local/opt/fzf', { 'do': 'brew install fzf' }                        " fast grep file content
+Plug '/usr/local/opt/fzf'                                                      " fast grep file content; brew install fzf
 Plug 'junegunn/fzf.vim'                                                        " fzf plugin that rely on rg
 Plug 'jlanzarotta/bufexplorer'                                                 " buf explorer window
 Plug 'junegunn/goyo.vim'                                                       " disctraction free mode :Goyo, turn off by :Goyo!

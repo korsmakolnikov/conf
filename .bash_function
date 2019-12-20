@@ -30,6 +30,16 @@ function who_on_port () {
     sudo lsof -i tcp:$1
 }
 
+function find_port_occupant () {
+  sudo lsof -i tcp:$1
+}
+
+function kill_port_occupant () {
+  kill -9 `sudo lsof -i tcp:$1`
+}
+
+export -f find_port_occupant
+export -f kill_port_occupant
 export -f who_on_port
 export -f git_up
 export -f git_down
