@@ -15,13 +15,13 @@ function dir_stats () {
 
 function git_up () {
     CBRANCH=`git branch | grep \* | cut -d ' ' -f2`
-    echo -e "\033[1mpush force with lease local branch ${CBRANCH} to origin/${CBRANCH}\033[0m"
+    printf "\e[38;5;81mpush force with lease local branch ${CBRANCH} to origin/${CBRANCH}\e[0m\n"
     git push --force-with-lease origin $CBRANCH
 }
 
 function git_down () {
     CBRANCH=`git branch | grep \* | cut -d ' ' -f2`
-    echo -e "\033e[1mpull local branch from origin/${CBRANCH}\033[0m"
+    printf "\e[38;5;81mpull local branch from origin/${CBRANCH}\e[0m\n"
     git fetch -p
     git pull origin $CBRANCH --rebase
 }
