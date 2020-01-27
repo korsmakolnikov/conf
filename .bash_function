@@ -52,6 +52,8 @@ function _yarn_switch () {
 
 alias yprepare="_yarn_prepare"
 alias yswitch="_yarn_switch"
+alias git.down="git_down"
+alias git.up="git_up"
 
 export -f find_port_occupant
 export -f kill_port_occupant
