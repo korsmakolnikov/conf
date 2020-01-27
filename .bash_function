@@ -38,9 +38,26 @@ function kill_port_occupant () {
   kill -9 `sudo lsof -i tcp:$1`
 }
 
+# yarn specific
+function _yarn_prepare () {
+  git fetch -p 
+  git checkout `$1`
+  yarn -f
+}
+
+function _yarn_switch () {
+  git checkout `$1`
+  yarn -f
+}
+
+alias yprepare="_yarn_prepare"
+alias yswitch="_yarn_switch"
+
 export -f find_port_occupant
 export -f kill_port_occupant
 export -f who_on_port
 export -f git_up
 export -f git_down
 export -f dir_stats
+export -f _yarn_switch
+export -f _yarn_prepare
