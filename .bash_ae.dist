@@ -1,8 +1,11 @@
 export AD_ACCOUNTNAME=federico.caprari
+export GOPRIVATE=*.hootops.com
 
 alias jabba_gw='ssh -N -L 8000:internal-jabba-gateway-284692762.us-east-1.elb.amazonaws.com:80 ubuntu@gw-stage-us-east-1.adespresso.com'
 alias ae-start="docker/init.sh --no-docker-sync"
 alias ae-login="bash --init-file docker/bash_profile -i"
+
+alias _tapas="tapas build ; make tapas"
 
 # MYSQL
 export PATH="$PATH:/usr/local/Cellar/mysql@5.6/5.6.43/bin/"
