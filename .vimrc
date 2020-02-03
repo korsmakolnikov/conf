@@ -78,6 +78,13 @@ Plug 'pangloss/vim-javascript'
 " Color schemes
 Plug 'Mcmartelle/vim-monokai-bold'
 
+" Erlang plugins
+Plug 'vim-erlang/vim-erlang-runtime'
+Plug 'vim-erlang/vim-erlang-compiler'
+Plug 'vim-erlang/vim-erlang-omnicomplete'
+Plug 'vim-erlang/vim-erlang-skeletons'
+" add tags plugin or a language server
+
 call plug#end()
 
 " NERDTree
