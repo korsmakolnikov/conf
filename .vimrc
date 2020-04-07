@@ -73,6 +73,9 @@ Plug 'elixir-editors/vim-elixir'                                               "
 " js plugin
 Plug 'mxw/vim-jsx'                                                             " vim-jsx and vim-javascript fix js highlightind
 Plug 'pangloss/vim-javascript'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
 " js plugin end
 
 " Color schemes
@@ -155,6 +158,9 @@ let g:LanguageClient_serverCommands = {
     \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
     \ 'go': ['go-languageserver -gocodecompletion'],
     \ }
+
+"vim js 
+let g:jsx_ext_required = 0
 
 " hie configuration 
 let g:LanguageClient_rootMarkers = ['*.cabal', 'stack.yaml']
