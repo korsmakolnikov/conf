@@ -63,8 +63,8 @@ else
 endif
 
 " golang plugin
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'deoplete-plugins/deoplete-go', { 'do': 'make' }
+"Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+"Plug 'deoplete-plugins/deoplete-go', { 'do': 'make' }
 " golang plugin end
 
 Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }                         " haskell language server client
@@ -73,9 +73,9 @@ Plug 'elixir-editors/vim-elixir'                                               "
 " js plugin
 Plug 'mxw/vim-jsx'                                                             " vim-jsx and vim-javascript fix js highlightind
 Plug 'pangloss/vim-javascript'
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-Plug 'roxma/nvim-yarp'
-Plug 'roxma/vim-hug-neovim-rpc'
+"Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+"Plug 'roxma/nvim-yarp'
+"Plug 'roxma/vim-hug-neovim-rpc'
 " js plugin end
 
 " Color schemes
@@ -136,14 +136,14 @@ call deoplete#custom#option({
 \ })
 
 " vim-go and golang rules
-let g:go_auto_sameids = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_function_parameters = 1
-let g:go_highlight_function_calls = 1
-let g:go_highlight_types = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_variable_declarations = 0
-let g:go_highlight_variable_assignments = 1
+"let g:go_auto_sameids = 1
+"let g:go_highlight_functions = 1
+"let g:go_highlight_function_parameters = 1
+"let g:go_highlight_function_calls = 1
+"let g:go_highlight_types = 1
+"let g:go_highlight_fields = 1
+"let g:go_highlight_variable_declarations = 0
+"let g:go_highlight_variable_assignments = 1
 "let g:go_fmt_autosave = 0
 
 " Required for operations modifying multiple buffers like rename.
@@ -152,11 +152,11 @@ set hidden
 " Inactive language servers bind
 " javascript does not work. I think server does not start
 " \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
+" \ 'go': ['go-languageserver -gocodecompletion'],
 let g:LanguageClient_serverCommands = {
     \ 'haskell': ['hie-wrapper'],
     \ 'javascript': ['tcp://127.0.0.1:2089'],
     \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
-    \ 'go': ['go-languageserver -gocodecompletion'],
     \ }
 
 "vim js 
