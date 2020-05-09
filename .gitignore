@@ -6,12 +6,8 @@
 !.gitignore
 !.vimrc
 !.bash_profile
-!.spacemacs
-!.emacs.d/private/*
 !.bash_function
-!qzerty.keylayout
 !.vim/
-.vim/plugged
 !.vimrc
 !.bash_ae.dist
 !.iterm2
