@@ -14,5 +14,6 @@
 .vim/plugged
 !.vimrc
 !.bash_ae.dist
+!.iterm2
 *
 
